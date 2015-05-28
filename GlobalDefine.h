@@ -29,9 +29,9 @@
 #pragma mark - 通知监听、移除
 #pragma mark -
 
-#define ObserverNotificationByName(NAME) [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleNotification:) name:NAME object:nil];
+#define ObserverNotificationByName(NAME) [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:NAME object:nil];
 #define RemoveNotificationByName(NAME) [[NSNotificationCenter defaultCenter] removeObserver:self name:NAME object:nil];
-#define PostNotificationByName(NAME,OBJECT)[[NSNotificationCenter defaultCenter]postNotificationName:NAME object:OBJECT];
+#define PostNotificationByName(NAME,OBJECT)[[NSNotificationCenter defaultCenter] postNotificationName:NAME object:OBJECT];
 
 /************************************/
 #pragma mark - 日志打印
