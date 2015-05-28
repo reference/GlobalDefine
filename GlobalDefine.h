@@ -1,22 +1,29 @@
 //
 //  GlobalDefine.h
-//  Community
 //
-//  Created by Scott Ban on 15/5/28.
-//  Copyright (c) 2015年 ios. All rights reserved.
+//  Created by Scott Ban (https://github.com/reference) on 14/07/30.
+//  Copyright (C) 2011-2020 by Scott Ban
+
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
 //
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 
 #ifndef Community_GlobalDefine_h
 #define Community_GlobalDefine_h
-
-/************************************/
-#pragma mark - 转圈
-#pragma mark -
-
-#define Spining_Hide_Wait   @"Spining_Hide_Wait"
-#define Spining_Show_Wait   @"Spining_Show_Wait"
-
-#define Network_Fail        @"Network_Fail"
 
 /************************************/
 #pragma mark - 通知监听、移除
@@ -54,10 +61,6 @@
 #define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
 #define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
 
-//获得当前屏幕宽、高
-#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
-#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
-
 //判断是否为iphone6、iphone6p、iphone5
 #define iphone6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
 #define iphone6p (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
@@ -66,25 +69,8 @@
 //判断当前系统版本是否ios7
 #define IOS7_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
 
-/************************************/
-#pragma mark - 服务器
-#pragma mark -
-
-//返回服务器地址
-#define HostUrl [[BusinessURL Instance] getURLWithRequest:URL_Host]
-
-/************************************/
-#pragma mark - 缓存
-#pragma mark -
-
-//缓存归档文件夹
-#define CacheDirectory @"CacheData"
-
-/************************************/
-#pragma mark - 扩展方法
-#pragma mark -
-
-//转换色值为uicolor
-#define UICOLOR_RGB_Alpha(_color,_alpha) [UIColor colorWithRed:((_color>>16)&0xff)/255.0f green:((_color>>8)&0xff)/255.0f blue:(_color&0xff)/255.0f alpha:_alpha]
+//获得当前屏幕宽、高
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
 
 #endif
